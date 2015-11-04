@@ -23,9 +23,11 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
-  <div id="typed-strings" style="visibility: hidden;">
+  <div id="typed-strings">
     <p>Cloud automation</p>
     <p>DevOps</p>
     <p>Polyglot developers</p>
@@ -41,7 +43,7 @@
               <h1 class="hostyle" id="heads">Plan C</h1>
               <p class="pstyle">Technologies</p>
             </div>
-            <h2><span id="typed"></span> you can bank your business on.</h2>
+            <h2><span id="typed">Technology</span> you can bank your business on.</h2>
             <a href="#services" class="page-scroll arrow"><i class="fa fa-angle-down"></i></a>
           </div>
         </div>
@@ -214,7 +216,7 @@
                 <figcaption>
                   <h2><span>Michael</span>Stein</h2>
                   <p class="hidden-xs">Our international fun guy.</p>
-                  <a href="http://www.agileinception.net/"><i class="fa fa-linkedin-square"></i></a>
+                  <a href="http://www.agileinception.net/team.php"><i class="fa fa-linkedin-square"></i></a>
                 </figcaption>
               </figure>
             </div>
@@ -387,8 +389,6 @@
    </div>
   </footer>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script  type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript" src="js/jquery.sticky.js"></script>
   <script>
     $(window).load(function(){
@@ -413,30 +413,34 @@
   <script src="js/typed.min.js" type="text/javascript"></script> 
   <script src="js/jquery.mixitup.js" type="text/javascript"></script> 
   <script src="js/jquery.waypoints.min.js" type="text/javascript"></script> 
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   <script>
     $(function(){
       var windowH = $(window).height();
       var bannerH = $('#banner').height();
-      if(windowH > bannerH) {                            
+      
+      if (windowH > bannerH) {                            
         $('#banner').css({'height':($(window).height() - 68)+'px'});
         $('#bannertext').css({'height':($(window).height() - 68)+'px'});
-      }                                                                               
+      }
+
       $(window).resize(function(){
         var windowH = $(window).height();
         var bannerH = $('#banner').height();
         var differenceH = windowH - bannerH;
         var newH = bannerH + differenceH;
         var truecontentH = $('#bannertext').height();
-        if(windowH < truecontentH) {
-          $('#banner').css({'height': (newH - 68)+'px'});
-          $('#bannertext').css({'height': (newH - 68)+'px'});
-        }
-        if(windowH > truecontentH) {
+        
+        if (windowH < truecontentH) {
           $('#banner').css({'height': (newH - 68)+'px'});
           $('#bannertext').css({'height': (newH - 68)+'px'});
         }
 
-      })          
+        if (windowH > truecontentH) {
+          $('#banner').css({'height': (newH - 68)+'px'});
+          $('#bannertext').css({'height': (newH - 68)+'px'});
+        }
+      });
     });
 
     $(function(){

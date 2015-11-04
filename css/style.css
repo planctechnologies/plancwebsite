@@ -11,6 +11,10 @@ html, body {
   margin: 0px;
 }
 
+#typed-strings {
+  display: none;
+}
+
 .bold {
   font-weight: 600;
   color: #1E1E1E;
@@ -70,6 +74,7 @@ p.desc {
     50% { opacity:0; }
     100% { opacity:1; }
 }
+
 
 
 /*------------------------------------------/
@@ -339,7 +344,7 @@ p.desc {
 .grid figure img {
   position: relative;
   display: block;
-  min-height: 100%;
+  /*min-height: 100%;*/
   max-width: 100%;
   opacity: 0.8;
 }
