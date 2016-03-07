@@ -90,6 +90,15 @@ p.desc {
   color: #fff;
 }
 
+.banner-whatsyourplan {
+  position: relative;
+  background-color: #1E1E1E;
+  background-image: url('/images/background.jpg');
+  background-position: center center, center top;
+  background-repeat: repeat, no-repeat;
+  color: #fff;
+}
+
 .banner-text 
 {
   display: table-cell;
